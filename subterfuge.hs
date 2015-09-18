@@ -3,5 +3,5 @@ import System.Environment
 
 main :: IO ()
 main = do
-	args <- getArgs
-	putStrLn ("Subterfuge " ++ args !! 0)
+    args <- getArgs
+    putStrLn ("Subterfuge " ++ args !! 0)
