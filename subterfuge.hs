@@ -20,7 +20,6 @@ data LispVal = Atom String
             | String String
             | Bool Bool
 
-
 main :: IO ()
 main = do
     (expr:_) <- getArgs
