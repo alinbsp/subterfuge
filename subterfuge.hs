@@ -13,6 +13,14 @@ readExpr input = case parse (spaces >> symbol) "lisp" input of
     Left err -> "No match: " ++ show err
     Right val -> "Found value"
 
+data LispVal = Atom String
+            | List [LispVal]
+            | DottedList [LispVal] LispVal
+            | Number Integer
+            | String String
+            | Bool Bool
+
+
 main :: IO ()
 main = do
     (expr:_) <- getArgs
